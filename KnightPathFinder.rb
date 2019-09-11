@@ -49,11 +49,11 @@ class KnightPathFinder
 
   def find_path(end_pos)
     path = []
-    current_position = @root_node.bfs(end_pos)
+    current_pos = @root_node.bfs(end_pos)
 
-    while current_position
-      path.unshift(current_position.value)
-      current_position = current_position.parent
+    while current_pos
+      path.unshift(current_pos.value)
+      current_pos = current_pos.parent
     end
 
     path
